@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pig-Game FPS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div id="atmosphere"></div>
+
+    <div id="overlay" class="show">
+      <h1>Pig-Game</h1>
+      <p class="subtitle">Climb the cursed tower and kill the Pig Lord at the summit.</p>
+      <p>WASD move, Shift sprint, Space jump and double jump, Mouse aim, Click fire bazooka.</p>
+      <p>Power-ups: shoot the trader pig to open market, press 1-4 to buy, press F to use jetpack.</p>
+      <div class="overlay-buttons">
+        <button id="startButton">Enter The Farm</button>
+        <button id="resetButton">Reset Run</button>
+      </div>
+    </div>
+
+    <div id="hud">
+      <div id="levelBanner">Level 1</div>
+      <div class="hud-top">
+        <div class="panel"><span>Tower</span><strong id="wave">1/10</strong></div>
+        <div class="panel"><span>HP</span><strong id="health">100</strong></div>
+        <div class="panel"><span>Coins</span><strong id="coins">0</strong></div>
+        <div class="panel"><span>Kills</span><strong id="kills">0</strong></div>
+        <div class="panel"><span>Altitude</span><strong id="altitude">0m</strong></div>
+      </div>
+      <div id="bossBarWrap"><div id="bossBar"></div></div>
+      <div id="marketPanel">
+        <h3>Black Tusk Market</h3>
+        <div class="market-row" id="shopItem1"><span>[1] 3 Jump Boots</span><strong>50</strong><em class="owned-badge" id="owned1">Owned</em></div>
+        <div class="market-row" id="shopItem2"><span>[2] Jetpack (5s / 30s CD)</span><strong>100</strong><em class="owned-badge" id="owned2">Owned</em></div>
+        <div class="market-row" id="shopItem3"><span>[3] Super Bazooka (x5)</span><strong>200</strong><em class="owned-badge" id="owned3">Owned</em></div>
+        <div class="market-row" id="shopItem4"><span>[4] Super Duper Jump Boots</span><strong>1000</strong><em class="owned-badge" id="owned4">Owned</em></div>
+      </div>
+      <div id="message"></div>
+      <div id="crosshair"></div>
+    </div>
+
+    <canvas id="gameCanvas"></canvas>
+
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
